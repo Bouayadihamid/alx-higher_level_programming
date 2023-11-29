@@ -3,9 +3,9 @@ def fizzbuzz():
     for num in range(1, 101):
         if num % 15 == 0:
             print("FizzBuzz", end="")
-        elif i % 5 == 0:
+        elif num % 5 == 0:
             print("Buzz", end="")
-        elif i % 3 == 0:
+        elif num % 3 == 0:
             print("Fizz", end="")
         else:
             print("{:d}".format(num), end="")
