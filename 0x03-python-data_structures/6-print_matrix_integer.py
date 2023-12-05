@@ -2,8 +2,8 @@
 def print_matrix_integer(matrix=[[]]):
     if not matrix:
         return None
-    for num in matrix:
-            if len(num) == 0:
+    for row in matrix:
+            if len(row) == 0:
                 print()
-            for i in range(len(num)):
-                print("{:d}".format(num[i]), end="\n" if i is len(num) - 1 else " ")
+            for i in range(len(row)):
+                print("{:d}".format(row[i]), end="\n" if i == len(row) - 1 else " ")
