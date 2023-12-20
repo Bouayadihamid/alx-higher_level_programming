@@ -39,11 +39,10 @@ class Square:
             The size of square
         """
         return self.__size ** 2
-    
+
     def my_print(self):
         """Print square"""
         for i in range(self.size):
             for j in range(self.size):
                 print("#", end="\n" if j is self.size - 1 and i != j else "")
         print()
-
