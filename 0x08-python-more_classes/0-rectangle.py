@@ -2,6 +2,8 @@
 """
 Define a class rectangle
 """
+
+
 class Rectangle:
     """Empty rectangle"""
     pass
