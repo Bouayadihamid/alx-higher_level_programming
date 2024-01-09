@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module for my lists (inherits form list)
+Module for my list class
 """
 
 
@@ -10,6 +10,5 @@ class MyList(list):
     return my list and sorted list
     """
     def print_sorted(self):
-        # sorted method
-        # sorted(iterable[, key][, reverse])
+        '''Method for printing sorted list'''
         print(sorted(self))
