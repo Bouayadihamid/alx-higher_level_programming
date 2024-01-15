@@ -2,6 +2,7 @@
 '''Module for the base class.'''
 
 
+
 class Base:
     '''The Base representation'''
 
