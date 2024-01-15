@@ -8,10 +8,10 @@ class Base:
 
     __nb_objects = 0
 
-    def def __init__(self, id=None):
+    def __init__(self, id=None):
         '''Constructor'''
         if id is not None:
-            self.id = is
+            self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
