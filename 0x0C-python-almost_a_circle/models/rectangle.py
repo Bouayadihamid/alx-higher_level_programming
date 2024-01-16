@@ -45,6 +45,7 @@ class Rectangle(Base):
     def y(self):
         '''y of the rectangle'''
         return self.__y
+
     @y.setter
     def y(self, value):
         self.__y = value
