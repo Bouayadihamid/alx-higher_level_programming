@@ -1,8 +1,8 @@
 #!/usr/bin/node
-/* A script that calculates the tasks completed for each user. */
-const url = process.argv.slice(2)[0];
+/* A script that computes the number of tasks completed by user id. */
+// const url = process.argv.slice(2)[0];
 const request = require('request');
-request(url, (error, response, body) => {
+request(process.argv.slice(2)[0], (error, response, body) => {
   if (error) { return; }
   const data = JSON.parse(body);
   const usersTasks = {};
