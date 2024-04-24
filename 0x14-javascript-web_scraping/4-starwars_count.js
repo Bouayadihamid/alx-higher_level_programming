@@ -11,5 +11,5 @@ request(process.argv[2], (err, res, body) => {
       count++;
     }
   });
-  console.log(err || count);
+  console.log(count);
 });
