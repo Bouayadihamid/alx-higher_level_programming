@@ -1,23 +1,21 @@
 #!/usr/bin/node
-
-const url = 'https://jsonplaceholder.typicode.com/todos';
+/* A script that calculates the tasks completed for each user. */
+const url = process.argv.slice(2)[0];
 const request = require('request');
-const userCompleted = {};
-
-request(url, (err, res, body) => {
-  if (err) {
-    console.log(err);
-  } else {
-    const todos = JSON.parse(body);
-    todos.forEach(todo => {
-      if (todo.completed === true) {
-        if (userCompleted[todo.userId] === undefined) {
-          userCompleted[todo.userId] = 1;
-        } else {
-          userCompleted[todo.userId] += 1;
-        }
-      }
-    });
-    console.log(userCompleted);
+request(url, (error, response, body) => {
+  if (error) { return; }
+  const data = JSON.parse(body);
+  const usersTasks = {};
+  if (!data || !data.length) {
+    console.log(usersTasks);
+    return;
   }
+  for (const dict of data) {
+    const userId = dict.userId;
+    if (dict.completed) {
+      if (usersTasks[userId]) usersTasks[userId]++;
+      else usersTasks[userId] = 1;
+    }
+  }
+  console.log(usersTasks);
 });
